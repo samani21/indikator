@@ -26,27 +26,27 @@ include "../../asset/koneksi/koneksi.php";
                             </tr>
                             <tr>
                                 Target
-                                <input class="form-control" type="number" name="target" id="terget" value="<?php echo $data['target']?>"  placeholder="Target" aria-label="default input example">
+                                <input class="form-control" type="text" name="target" id="terget" value="<?php echo $data['target']?>"  placeholder="Target" aria-label="default input example">
                             </tr>
                             <tr>
                                 Juni
-                                <input class="form-control" type="number" name="jun" id="jun" value="<?php echo $data['jun']?>"  placeholder="Juni" aria-label="default input example">
+                                <input class="form-control" type="text" name="jun" id="jun" value="<?php echo $data['jun']?>"  placeholder="Juni" aria-label="default input example">
                             </tr>
                             <tr>
                                 Juli
-                                <input class="form-control" type="number" name="jul" id="jul" value="<?php echo $data['jul']?>"  placeholder="Juli" aria-label="default input example">
+                                <input class="form-control" type="text" name="jul" id="jul" value="<?php echo $data['jul']?>"  placeholder="Juli" aria-label="default input example">
                             </tr>
                             <tr>
                                 Agustus
-                                <input class="form-control" type="number" name="agt" id="agt" value="<?php echo $data['agt']?>"   placeholder="Agustus" aria-label="default input example">
+                                <input class="form-control" type="text" name="agt" id="agt" value="<?php echo $data['agt']?>"   placeholder="Agustus" aria-label="default input example">
                             </tr>
                             <tr>
                                 September
-                                <input class="form-control" type="number" name="sep" id="sep" value="<?php echo $data['sep']?>"  placeholder="September" aria-label="default input example">
+                                <input class="form-control" type="text" name="sep" id="sep" value="<?php echo $data['sep']?>"  placeholder="September" aria-label="default input example">
                             </tr>
                             <tr>
                                 Rerata
-                                <input class="form-control" type="number" Readonly name="rata" id="total" value="<?php echo $data['rata']?>"  placeholder="Rerata" aria-label="default input example">
+                                <input class="form-control" type="text" name="rata" id="rata" value="<?php echo $data['rata']?>"  placeholder="Rerata" aria-label="default input example">
                             </tr>
                             <tr>
                                 <br>

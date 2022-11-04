@@ -8,7 +8,7 @@ include "header.php";
                 <div class="col-6 col-md-4 col-lg-2">
                     <a href="ruangan/pendaftaran.php" class="text-dark" style="text-decoration: none;">
                         <div class="card">
-                            <img src="asset/logo/umum.png" class="card-img-top" alt="...">
+                            <img src="asset/logo/pendaftaran.png" class="card-img-top" alt="...">
                             <div class="card-body">
                               <h5 class="card-title">Ruangan Pendaftaran dan Rekam Medis</h5>
                             </div>
@@ -28,7 +28,7 @@ include "header.php";
                 <div class="col-6 col-md-4 col-lg-2">
                 <a href="ruangan/anak.php" class="text-dark" style="text-decoration: none;">
                         <div class="card">
-                            <img src="asset/logo/umum.png" class="card-img-top" alt="...">
+                            <img src="asset/logo/anak.png" class="card-img-top" alt="...">
                             <div class="card-body">
                               <h5 class="card-title">Ruangan Pemeriksaan Anak</h5>
                             </div>
@@ -38,7 +38,7 @@ include "header.php";
                 <div class="col-6 col-md-4 col-lg-2">
                 <a href="ruangan/tindakan.php" class="text-dark" style="text-decoration: none;">
                         <div class="card">
-                            <img src="asset/logo/umum.png" class="card-img-top" alt="...">
+                            <img src="asset/logo/tindakan.png" class="card-img-top" alt="...">
                             <div class="card-body">
                               <h5 class="card-title">Ruangan Tindakan</h5>
                             </div>
@@ -48,7 +48,7 @@ include "header.php";
                 <div class="col-6 col-md-4 col-lg-2">
                 <a href="ruangan/gigi.php" class="text-dark" style="text-decoration: none;">
                         <div class="card">
-                            <img src="asset/logo/umum.png" class="card-img-top" alt="...">
+                            <img src="asset/logo/gigi.png" class="card-img-top" alt="...">
                             <div class="card-body">
                               <h5 class="card-title">Ruangan Kesehatan Gigi dan Mulut</h5>
                             </div>
@@ -58,7 +58,7 @@ include "header.php";
                 <div class="col-6 col-md-4 col-lg-2">
                 <a href="ruangan/lab.php" class="text-dark" style="text-decoration: none;">
                         <div class="card">
-                            <img src="asset/logo/umum.png" class="card-img-top" alt="...">
+                            <img src="asset/logo/laboratorium.png" class="card-img-top" alt="...">
                             <div class="card-body">
                               <h5 class="card-title">LABORATORIUM</h5>
                             </div>
@@ -68,7 +68,7 @@ include "header.php";
                 <div class="col-6 col-md-4 col-lg-2">
                 <a href="ruangan/kia.php" class="text-dark" style="text-decoration: none;">
                         <div class="card">
-                            <img src="asset/logo/umum.png" class="card-img-top" alt="...">
+                            <img src="asset/logo/kia.png" class="card-img-top" alt="...">
                             <div class="card-body">
                               <h5 class="card-title">Ruangan KIA,KB dan Imunisasi</h5>
                             </div>
@@ -78,7 +78,7 @@ include "header.php";
                 <div class="col-6 col-md-4 col-lg-2">
                 <a href="ruangan/farmasi.php" class="text-dark" style="text-decoration: none;">
                         <div class="card">
-                            <img src="asset/logo/umum.png" class="card-img-top" alt="...">
+                            <img src="asset/logo/farmasi.png" class="card-img-top" alt="...">
                             <div class="card-body">
                               <h5 class="card-title">FARMASI</h5>
                             </div>
@@ -88,7 +88,7 @@ include "header.php";
                 <div class="col-6 col-md-4 col-lg-2">
                 <a href="ruangan/persalinan.php" class="text-dark" style="text-decoration: none;">
                         <div class="card">
-                            <img src="asset/logo/umum.png" class="card-img-top" alt="...">
+                            <img src="asset/logo/persalinan.png" class="card-img-top" alt="...">
                             <div class="card-body">
                               <h5 class="card-title">Ruangan Persalinan Obstetri dan Neonatus Dasar</h5>
                             </div>
@@ -98,7 +98,7 @@ include "header.php";
                 <div class="col-6 col-md-4 col-lg-2">
                 <a href="ruangan/gizi.php" class="text-dark" style="text-decoration: none;">
                         <div class="card">
-                            <img src="asset/logo/umum.png" class="card-img-top" alt="...">
+                            <img src="asset/logo/gizi.png" class="card-img-top" alt="...">
                             <div class="card-body">
                               <h5 class="card-title">Ruangan Konsultasi Gizi</h5>
                             </div>
@@ -108,7 +108,7 @@ include "header.php";
                 <div class="col-6 col-md-4 col-lg-2">
                 <a href="ruangan/ispa.php" class="text-dark" style="text-decoration: none;">
                         <div class="card">
-                            <img src="asset/logo/umum.png" class="card-img-top" alt="...">
+                            <img src="asset/logo/ispa.png" class="card-img-top" alt="...">
                             <div class="card-body">
                               <h5 class="card-title">Ruangan Pemeriksaan Khusus(ISPA)</h5>
                             </div>
@@ -118,7 +118,7 @@ include "header.php";
                 <div class="col-6 col-md-4 col-lg-2">
                 <a href="ruangan/edukasi.php" class="text-dark" style="text-decoration: none;">
                         <div class="card">
-                            <img src="asset/logo/umum.png" class="card-img-top" alt="...">
+                            <img src="asset/logo/edukasi.png" class="card-img-top" alt="...">
                             <div class="card-body">
                               <h5 class="card-title">Ruangan Komunikasi,Informasi dan Edukasi</h5>
                             </div>

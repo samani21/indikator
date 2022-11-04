@@ -8,7 +8,7 @@
     <script src="../../asset/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <title>Document</title>
+    <title>INDIKATOR</title>
     <style>
         @media only screen and (max-width:550px) {
             #no-more-tables body,
