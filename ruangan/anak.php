@@ -10,12 +10,12 @@ include "header.php";
                 </h3>
                 <table>
                     <th>
-                        <a href="aksi/Tambah_anak.php"class="btn btn-primary" >Tambah Data</a>
+                        <a href="aksi/tambah_anak.php"class="btn btn-primary" >Tambah Data</a>
                     </th>
                     <th>
                         <div class="dropdown">
                             <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown button
+                            Cetak Excel
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                             <?php
@@ -33,7 +33,7 @@ include "header.php";
                     <th>
                         <div class="dropdown">
                             <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown button
+                            Cetak Excel
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                             <?php
