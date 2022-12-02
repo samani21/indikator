@@ -90,18 +90,110 @@ include "header.php";
                             <td data-title="No"><?php echo $no++;?></td>
                             <td data-title="Indikator"><?php echo $data['indikator'];?></td>
                             <td data-title="Target"><?php echo $data['target'];?>%</td>
-                            <td data-title="Januari"><?php echo $data['jan'];?>%</td>
-                            <td data-title="Februari"><?php echo $data['feb'];?>%</td>
-                            <td data-title="Maret"><?php echo $data['mar'];?>%</td>
-                            <td data-title="April"><?php echo $data['apr'];?>%</td>
-                            <td data-title="Mei"><?php echo $data['mei'];?>%</td>
-                            <td data-title="Juni"><?php echo $data['jun'];?>%</td>
-                            <td data-title="Juli"><?php echo $data['jul'];?>%</td>
-                            <td data-title="Agustus"><?php echo $data['agt'];?>%</td>
-                            <td data-title="September"><?php echo $data['sep'];?>%</td>
-                            <td data-title="Oktober"><?php echo $data['okt'];?>%</td>
-                            <td data-title="November"><?php echo $data['nov'];?>%</td>
-                            <td data-title="Desember"><?php echo $data['des'];?>%</td>
+                            <td data-title="Januari"><font color="<?php if($data['jan'] < $data['target']){
+                                    echo "red";
+                                }else{
+                                    echo "black";
+                                } ?>"><?php if($data['jan'] ==''){
+                                    echo '';
+                                }else{
+                                    echo $data['jan']; echo '%';
+                                } ?></font></td>
+                            <td data-title="Februari"><font color="<?php if($data['feb'] < $data['target']){
+                                    echo "red";
+                                }else{
+                                    echo "black";
+                                } ?>"><?php if($data['feb'] ==''){
+                                    echo '';
+                                }else{
+                                    echo $data['feb']; echo '%';
+                                } ?></font></td>
+                            <td data-title="Maret"><font color="<?php if($data['mar'] < $data['target']){
+                                    echo "red";
+                                }else{
+                                    echo "black";
+                                } ?>"><?php if($data['mar'] ==''){
+                                    echo '';
+                                }else{
+                                    echo $data['mar']; echo '%';
+                                } ?></font></td>
+                            <td data-title="April"><font color="<?php if($data['apr'] < $data['target']){
+                                    echo "red";
+                                }else{
+                                    echo "black";
+                                } ?>"><?php if($data['apr'] ==''){
+                                    echo '';
+                                }else{
+                                    echo $data['apr']; echo '%';
+                                } ?></font></td>
+                            <td data-title="Mei"><font color="<?php if($data['mei'] < $data['target']){
+                                    echo "red";
+                                }else{
+                                    echo "black";
+                                } ?>"><?php if($data['mei'] ==''){
+                                    echo '';
+                                }else{
+                                    echo $data['mei']; echo '%';
+                                } ?></font></td>
+                            <td data-title="Juni"><font color="<?php if($data['jun'] < $data['target']){
+                                    echo "red";
+                                }else{
+                                    echo "black";
+                                } ?>"><?php if($data['jun'] ==''){
+                                    echo '';
+                                }else{
+                                    echo $data['jun']; echo '%';
+                                } ?></font></td>
+                            <td data-title="Juli"><font color="<?php if($data['jul'] < $data['target']){
+                                    echo "red";
+                                }else{
+                                    echo "black";
+                                } ?>"><?php if($data['jul'] ==''){
+                                    echo '';
+                                }else{
+                                    echo $data['jul']; echo '%';
+                                } ?></font></td>
+                            <td data-title="Agustus"><font color="<?php if($data['agt'] < $data['target']){
+                                    echo "red";
+                                }else{
+                                    echo "black";
+                                } ?>"><?php if($data['agt'] ==''){
+                                    echo '';
+                                }else{
+                                    echo $data['agt']; echo '%';
+                                } ?></font></td>
+                            <td data-title="September"><font color="<?php if($data['sep'] < $data['target']){
+                                    echo "red";
+                                }else{
+                                    echo "black";
+                                } ?>"><?php if($data['sep'] ==''){
+                                    echo '';
+                                }else{
+                                    echo $data['sep']; echo '%';
+                                } ?></font></td>
+                            <td data-title="Oktober"><font color="<?php if($data['okt'] < $data['target']){
+                                    echo "red";
+                                }else{
+                                    echo "black";
+                                } ?>"><?php if($data['okt'] ==''){
+                                    echo '';
+                                }else{
+                                    echo $data['okt']; echo '%';
+                                } ?></font></td>
+                            <td data-title="November"><font color="<?php if($data['nov'] < $data['target']){
+                                    echo "red";
+                                }else{
+                                    echo "black";
+                                } ?>"><?php if($data['nov'] ==''){
+                                    echo '';
+                                }else{
+                                    echo $data['nov']; echo '%';
+                                } ?></font></td>
+                            <td data-title="Desember"><font color="<?php if($data['des'] < $data['target']){
+                                    echo "red";
+                                }else{
+                                    echo "black";
+                                } ?>"><?php echo $data['des']?></font></td>
                             <td data-title="Rerata"><?php echo $data['rata'];?>%</td>
                             <td data-title="Action" align="center"><a href="aksi/edit_lab.php?id=<?php echo $data['id']; ?>"class="btn btn-warning">Edit</a>
                         <a href="aksi/hapus_lab.php?id=<?php echo $data['id']; ?>" class="btn btn-danger">Hapus</a></td>

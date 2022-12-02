@@ -52,19 +52,127 @@ ob_start();
                       <tr>
                         <td><?php echo $no++;?></td>
                         <td><?php echo $dt['indikator']?></td>
-                        <td><?php echo $dt['target']?>%</td>
-                        <td><?php echo $dt['jan']?>%</td>
-                        <td><?php echo $dt['feb']?>%</td>
-                        <td><?php echo $dt['mar']?>%</td>
-                        <td><?php echo $dt['apr']?>%</td>
-                        <td><?php echo $dt['mei']?>%</td>
-                        <td><?php echo $dt['jun']?>%</td>
-                        <td><?php echo $dt['jul']?>%</td>
-                        <td><?php echo $dt['agt']?>%</td>
-                        <td><?php echo $dt['sep']?>%</td>
-                        <td><?php echo $dt['okt']?>%</td>
-                        <td><?php echo $dt['nov']?>%</td>
-                        <td><?php echo $dt['des']?>%</td>
+                        <td align="center"><?php echo $dt['target']?>%</td>
+                        <td align="center"><font color="<?php if($dt['jan'] < $dt['target']){
+                                    echo "red";
+                                }else{
+                                    echo "black";
+                                } ?>"><?php if($dt['jan'] ==''){
+                                    echo '';
+                                }else{
+                                    echo $dt['jan']; echo '%';
+                                } ?></font>
+                        </td>
+                        <td align="center"><font color="<?php if($dt['feb'] < $dt['target']){
+                                    echo "red";
+                                }else{
+                                    echo "black";
+                                } ?>"><?php if($dt['feb'] ==''){
+                                    echo '';
+                                }else{
+                                    echo $dt['feb']; echo '%';
+                                } ?></font>
+                        </td>
+                        <td align="center"><font color="<?php if($dt['mar'] < $dt['target']){
+                                    echo "red";
+                                }else{
+                                    echo "black";
+                                } ?>"><?php if($dt['mar'] ==''){
+                                    echo '';
+                                }else{
+                                    echo $dt['mar']; echo '%';
+                                } ?></font>
+                        </td>
+                        <td align="center"><font color="<?php if($dt['apr'] < $dt['target']){
+                                    echo "red";
+                                }else{
+                                    echo "black";
+                                } ?>"><?php if($dt['apr'] ==''){
+                                    echo '';
+                                }else{
+                                    echo $dt['apr']; echo '%';
+                                } ?></font>
+                        </td>
+                        <td align="center"><font color="<?php if($dt['mei'] < $dt['target']){
+                                    echo "red";
+                                }else{
+                                    echo "black";
+                                } ?>"><?php if($dt['mei'] ==''){
+                                    echo '';
+                                }else{
+                                    echo $dt['mei']; echo '%';
+                                } ?></font>
+                        </td>
+                        <td align="center"><font color="<?php if($dt['jun'] < $dt['target']){
+                                    echo "red";
+                                }else{
+                                    echo "black";
+                                } ?>"><?php if($dt['jun'] ==''){
+                                    echo '';
+                                }else{
+                                    echo $dt['jun']; echo '%';
+                                } ?></font>
+                        </td>
+                        <td align="center"><font color="<?php if($dt['jul'] < $dt['target']){
+                                    echo "red";
+                                }else{
+                                    echo "black";
+                                } ?>"><?php if($dt['jul'] ==''){
+                                    echo '';
+                                }else{
+                                    echo $dt['jul']; echo '%';
+                                } ?></font>
+                        </td>
+                        <td align="center"><font color="<?php if($dt['agt'] < $dt['target']){
+                                    echo "red";
+                                }else{
+                                    echo "black";
+                                } ?>"><?php if($dt['agt'] ==''){
+                                    echo '';
+                                }else{
+                                    echo $dt['agt']; echo '%';
+                                } ?></font>
+                        </td>
+                        <td align="center"><font color="<?php if($dt['sep'] < $dt['target']){
+                                    echo "red";
+                                }else{
+                                    echo "black";
+                                } ?>"><?php if($dt['sep'] ==''){
+                                    echo '';
+                                }else{
+                                    echo $dt['sep']; echo '%';
+                                } ?></font>
+                        </td>
+                        <td align="center"><font color="<?php if($dt['okt'] < $dt['target']){
+                                    echo "red";
+                                }else{
+                                    echo "black";
+                                } ?>"><?php if($dt['okt'] ==''){
+                                    echo '';
+                                }else{
+                                    echo $dt['okt']; echo '%';
+                                } ?></font>
+                        </td>
+                        <td align="center"><font color="<?php if($dt['nov'] < $dt['target']){
+                                    echo "red";
+                                }else{
+                                    echo "black";
+                                } ?>"><?php if($dt['nov'] ==''){
+                                    echo '';
+                                }else{
+                                    echo $dt['nov']; echo '%';
+                                } ?></font>
+                        </td>
+                        <td align="center"><font color="<?php if($dt['des'] < $dt['target']){
+                                    echo "red";
+                                }else{
+                                    echo "black";
+                                } ?>"><?php if($dt['des'] ==''){
+                                    echo '';
+                                }else{
+                                    echo $dt['des']; echo '%';
+                                } ?></font>
+                        </td>
                         <td><?php echo $dt['rata']?>%</td>
                       </tr>
                         <?php
