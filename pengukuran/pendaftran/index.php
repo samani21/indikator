@@ -6,11 +6,28 @@ include "header.php";
         <br>
             <div class="row g-3">
                 <div class="col-6 col-md-4 col-lg-2">
-                    <a href="pendaftran/index.php" class="text-dark" style="text-decoration: none;">
+                    <a href="waktu_tunggu.php" class="text-dark" style="text-decoration: none;">
                         <div class="card">
-                            <img src="../asset/logo/pendaftaran.png" class="card-img-top" alt="...">
                             <div class="card-body">
-                              <h5 class="card-title">Ruangan Pendaftaran dan Rekam Medis</h5>
+                              <h5 class="card-title">Waktu tunggu registrasi pasien < 10 menit</h5>
+                            </div>
+                          </div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <a href="waktu_pelayanan.php" class="text-dark" style="text-decoration: none;">
+                        <div class="card">
+                            <div class="card-body">
+                              <h5 class="card-title">Waktu tunggu registrasi pasien < 10 menit</h5>
+                            </div>
+                          </div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <a href="waktu_pemeriksaan.php" class="text-dark" style="text-decoration: none;">
+                        <div class="card">
+                            <div class="card-body">
+                              <h5 class="card-title">Waktu tunggu pasien rawat jalan</h5>
                             </div>
                           </div>
                     </a>

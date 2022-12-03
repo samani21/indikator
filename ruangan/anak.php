@@ -33,7 +33,7 @@ include "header.php";
                     <th>
                         <div class="dropdown">
                             <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            Cetak Excel
+                            Cetak PDF
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                             <?php

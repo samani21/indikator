@@ -78,7 +78,7 @@ include "../../asset/koneksi/koneksi.php";
                             </tr>
                             <tr>
                                 Tahun
-                                <input class="form-control" type="text" name="tahun" id="tahun" value="<?php echo date("Y"); ?>"aria-label="default input example">
+                                <input class="form-control" type="text" name="tahun" id="tahun" value="<?php echo $data['tahun']?>"aria-label="default input example">
                             </tr>
                             <tr>
                                 <br>
