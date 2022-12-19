@@ -18,7 +18,7 @@ include "header.php";
                     <a href="waktu_pelayanan.php" class="text-dark" style="text-decoration: none;">
                         <div class="card">
                             <div class="card-body">
-                              <h5 class="card-title">Waktu tunggu registrasi pasien < 10 menit</h5>
+                              <h5 class="card-title">Kepuasan pelanggan</h5>
                             </div>
                           </div>
                     </a>

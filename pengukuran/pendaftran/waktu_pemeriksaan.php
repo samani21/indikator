@@ -35,10 +35,10 @@ ob_start();
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                             <?php
                                 include "../../asset/koneksi/koneksi.php";
-                                $query= mysqli_query($koneksi,"SELECT DISTINCT(bulan) FROM tb_pengukuran WHERE indikator LIKE 'Waktu tunggu pasien rawat jalan'");
+                                $query= mysqli_query($koneksi,"SELECT DISTINCT(bulan),tahun FROM tb_pengukuran WHERE indikator LIKE 'Waktu tunggu pasien rawat jalan'");
                                 while ($da = mysqli_fetch_array($query)){
                             ?>
-                                <li><a class="dropdown-item" href="../cetakpdf/pemeriksaan.php?bulan=<?php echo $da['bulan'];?>"><?php echo $da['bulan'];?></a></li>
+                                <li><a class="dropdown-item" href="../cetakpdf/pemeriksaan.php?bulan=<?php echo $da['bulan'];?>&tahun=<?php echo $da['tahun'] ?>"><?php echo $da['bulan'];?> <?php echo $da['tahun'] ?></a></li>
                                 <?php
                                 }
                                 ?>

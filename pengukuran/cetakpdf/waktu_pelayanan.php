@@ -1,5 +1,6 @@
 <?php
 $bulan = $_GET['bulan'];
+$tahun = $_GET['tahun'];
 //Jika download plugin mpdf dengan composer (versi baru)
 include '../../vendor/autoload.php';
 $mpdf = new \Mpdf\Mpdf();
@@ -10,7 +11,7 @@ include '../../asset/koneksi/koneksi.php';
 $nama_dokumen='RUANGAN ANAK';
 ob_start();
 
-    $query    =mysqli_query($koneksi, "SELECT * FROM tb_pengukuran WHERE bulan LIKE '$bulan' and indikator like 'Waktu pelayanan puskesmas dan kepuasan pelanggan'");
+    $query    =mysqli_query($koneksi, "SELECT * FROM tb_pengukuran WHERE bulan LIKE '$bulan' and indikator like 'Waktu pelayanan puskesmas dan kepuasan pelanggan' AND tahun LIKE '$tahun'");
     while ($data    =mysqli_fetch_array($query)){
         $total1[]    =$data['total1'];
         $data_1[]    =$data['data_1'];
@@ -30,7 +31,7 @@ ob_start();
         <table>
             <tr>
                 <td>BULAN &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;:</td>
-                <td>JANUARI 2022</td>
+                <td><?php echo $bulan ?> <?php echo $tahun ?></td>
             </tr>
             <tr>
                 <td>RUANGAN &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;:</td>
@@ -62,7 +63,7 @@ ob_start();
             <tbody>
                 <tr>
                     <?php 
-                    $ambilData = mysqli_query($koneksi,"SELECT COUNT(tanggal) AS tgl FROM `tb_pengukuran` WHERE bulan LIKE '$bulan' and indikator LIKE 'Waktu pelayanan puskesmas dan kepuasan pelanggan'");
+                    $ambilData = mysqli_query($koneksi,"SELECT COUNT(tanggal) AS tgl FROM `tb_pengukuran` WHERE bulan LIKE '$bulan' AND tahun LIKE '$tahun' and indikator LIKE 'Waktu pelayanan puskesmas dan kepuasan pelanggan'");
                     $data = mysqli_fetch_array($ambilData)
                     ?>
                     <td rowspan="<?php $tambah= $data['tgl'] + 1; echo $tambah ?>">
@@ -102,7 +103,7 @@ ob_start();
                     <?php
                         include "../../asset/koneksi/koneksi.php";
                         $no=1;
-                        $data= mysqli_query($koneksi,"SELECT * FROM `tb_pengukuran` WHERE bulan LIKE '$bulan' and indikator LIKE 'Waktu pelayanan puskesmas dan kepuasan pelanggan'");
+                        $data= mysqli_query($koneksi,"SELECT * FROM `tb_pengukuran` WHERE bulan LIKE '$bulan' AND tahun LIKE '$tahun' and indikator LIKE 'Waktu pelayanan puskesmas dan kepuasan pelanggan'");
                         
                         while($dt=mysqli_fetch_array($data) ){
                     ?>
@@ -132,7 +133,7 @@ ob_start();
                     <td colspan="3" align="center">Pencapaian</td>
                     <td align="center" colspan="6" >
                         <?php 
-                            $ambilData1= mysqli_query($koneksi,"SELECT COUNT(tanggal) AS tgl FROM `tb_pengukuran` WHERE bulan LIKE '$bulan'and indikator like 'Waktu pelayanan puskesmas dan kepuasan pelanggan'");
+                            $ambilData1= mysqli_query($koneksi,"SELECT COUNT(tanggal) AS tgl FROM `tb_pengukuran` WHERE bulan LIKE '$bulan' AND tahun LIKE '$tahun'and indikator like 'Waktu pelayanan puskesmas dan kepuasan pelanggan'");
                             $bagi = mysqli_fetch_array($ambilData1);
                             //total
                             
