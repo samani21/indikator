@@ -3,16 +3,13 @@ include "header.php";
 
 include '../../asset/koneksi/koneksi.php';
  
-$nama_dokumen='RUANGAN ANAK';
-ob_start();
-
 ?>
 
 <div class="container">
         <div class="row">
             <section class="bg-light ">
                 <h3 class="pb-2">
-                    Data pendaftran dan rekam medis
+                    Data Kepuasan Hasil Laboratorium
                 </h3>
                 <table>
                     <th>
@@ -26,10 +23,10 @@ ob_start();
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                             <?php
                                 include "../../asset/koneksi/koneksi.php";
-                                $query= mysqli_query($koneksi,"SELECT DISTINCT(bulan),tahun FROM tb_pengukuran WHERE indikator LIKE 'Kepuasan Pelanggan'");
+                                $query= mysqli_query($koneksi,"SELECT DISTINCT(bulan),tahun FROM tb_pengukuran WHERE indikator LIKE 'Kepuasan Laboratorium'");
                                 while ($da = mysqli_fetch_array($query)){
                             ?>
-                                <li><a class="dropdown-item" href="../cetakpdf/kepuasan_umum.php?bulan=<?php echo $da['bulan'];?>&tahun=<?php echo $da['tahun']?>"><?php echo $da['bulan'];?>  <?php echo $da['tahun'];?></a></li>
+                                <li><a class="dropdown-item" href="../cetakpdf/kepuasan_lab.php?bulan=<?php echo $da['bulan'];?>&tahun=<?php echo $da['tahun']?>"><?php echo $da['bulan'];?>  <?php echo $da['tahun'];?></a></li>
                                 <?php
                                 }
                                 ?>
@@ -61,7 +58,7 @@ ob_start();
             <tbody>
                 <tr>
                     <?php 
-                    $ambilData = mysqli_query($koneksi,"SELECT COUNT(tanggal) AS tgl FROM `tb_pengukuran` WHERE indikator LIKE 'Kepuasan Pelanggan'");
+                    $ambilData = mysqli_query($koneksi,"SELECT COUNT(tanggal) AS tgl FROM `tb_pengukuran` WHERE indikator LIKE 'Kepuasan Laboratorium'");
                     $data = mysqli_fetch_array($ambilData)
                     ?>
                     <td rowspan="<?php $tambah= $data['tgl'] + 1; echo $tambah ?>" data-title="indikator">
@@ -69,13 +66,13 @@ ob_start();
                     <b>Kepuasan Pelanggan</b>
                 </td>
                     <td align="center" rowspan="<?php $tambah= $data['tgl'] + 1; echo $tambah ?>" data-title="Target">
-                    100% 
+                    90% 
                 </td>
                    
                     <?php
                         include "../../asset/koneksi/koneksi.php";
                         $no=1;
-                        $data= mysqli_query($koneksi,"SELECT * FROM `tb_pengukuran` WHERE indikator LIKE 'Kepuasan Pelanggan'");
+                        $data= mysqli_query($koneksi,"SELECT * FROM `tb_pengukuran` WHERE indikator LIKE 'Kepuasan Laboratorium'");
                         
                         while($dt=mysqli_fetch_array($data) ){
                     ?>

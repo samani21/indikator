@@ -3,19 +3,18 @@ include "header.php";
 
 include '../../asset/koneksi/koneksi.php';
  
-$nama_dokumen='RUANGAN ANAK';
-ob_start();
+
 ?>
 
 <div class="container">
         <div class="row">
             <section class="bg-light ">
                 <h3 class="pb-2">
-                    Data pendaftran dan rekam medis
+                    Data Hasil laboratorium
                 </h3>
                 <table>
                     <th>
-                        <a href="tambahpendaftaran.php"class="btn btn-primary" >Tambah Data</a>
+                        <a href="tambahpemeriksaan.php"class="btn btn-primary" >Tambah Data</a>
                     </th>
                     <th>
                         <div class="dropdown">
@@ -25,10 +24,10 @@ ob_start();
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                             <?php
                                 include "../../asset/koneksi/koneksi.php";
-                                $query= mysqli_query($koneksi,"SELECT DISTINCT(bulan),tahun FROM tb_pengukuran WHERE indikator LIKE 'Waktu tunggu registrasi pasien < 10 menit'");
+                                $query= mysqli_query($koneksi,"SELECT DISTINCT(bulan),tahun FROM tb_pengukuran WHERE indikator LIKE 'hasil lab'");
                                 while ($da = mysqli_fetch_array($query)){
                             ?>
-                                <li><a class="dropdown-item" href="../cetakpdf/pendaftaran.php?bulan=<?php echo $da['bulan'];?>&tahun=<?php echo $da['tahun'] ?>"><?php echo $da['bulan'];?> <?php echo $da['tahun'] ?></a></li>
+                                <li><a class="dropdown-item" href="../cetakpdf/hasil_lab.php?bulan=<?php echo $da['bulan'];?>&tahun=<?php echo $da['tahun']?>"><?php echo $da['bulan'];?> <?php echo $da['tahun']?></a></li>
                                 <?php
                                 }
                                 ?>
@@ -47,25 +46,48 @@ ob_start();
                     <td align="center">INDIKATOR MUTU KLINIS</td>
                     <td align="center">TARGET</td>
                     <td align="center">TANGGAL</td>
-                    <td align="center">JUMLAH PASIEN YANG MENUNGGU REGISTRASI < 10 MENIT</th>
-                    <td align="center">JUMLAH PASIEN YANG BERKUNJUNG</th>
-                    <td align="center">Pencapaian perhari</th>
-                    <td align="center">AKsi</th>
+                    <td align="center">Tidak Terjadi kesalahan pemberian hasil laboratorium</td>
+                    <td align="center">Jumlah pasien yang berkunjung</td>
+                    <td align="center">Angka pengulangan pengambilan sampling darah ≤ 10%</td>
+                    <td align="center">jumlah pasien berkunjung yang diambil sampel</td>
+                    <td align="center">Pencapaian perhari</td>
+                    <td align="center">AKsi</td>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <?php 
-                    $ambilData = mysqli_query($koneksi,"SELECT COUNT(tanggal) AS tgl FROM `tb_pengukuran`WHERE indikator LIKE 'Waktu tunggu registrasi pasien < 10 menit' ");
+                    $ambilData = mysqli_query($koneksi,"SELECT COUNT(tanggal) AS tgl FROM `tb_pengukuran`WHERE indikator LIKE 'hasil lab' ");
                     $data = mysqli_fetch_array($ambilData)
                     ?>
-                    <td rowspan="<?php $tambah= $data['tgl'] + 1; echo $tambah ?>" data-title="Indikator">Waktu tunggu registrasi pasien < 10 menit</td>
-                    <td align="center" rowspan="<?php $tambah= $data['tgl'] + 1; echo $tambah ?>" data-title="target">90%</td>
+                    <td rowspan="<?php $tambah= $data['tgl'] + 1; echo $tambah ?>" data-title="Indikator">
+                        <b>1.tidak adanya kejadian kesalahan pemberian hasil laboeratorium</b>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <b>2.Angka pengulangan pengambilan sampling darah ≤ 10%</b>
+                    </td>
+                    <td align="center" rowspan="<?php $tambah= $data['tgl'] + 1; echo $tambah ?>" data-title="target">
+                        <b>100%</b>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <b>90%</b>
+                    </td>
                    
                     <?php
                         include "../../asset/koneksi/koneksi.php";
                         $no=1;
-                        $data= mysqli_query($koneksi,"SELECT * FROM `tb_pengukuran` WHERE indikator LIKE 'Waktu tunggu registrasi pasien < 10 menit'");
+                        $data= mysqli_query($koneksi,"SELECT * FROM `tb_pengukuran` WHERE indikator LIKE 'hasil lab'");
                         
                         while($dt=mysqli_fetch_array($data) ){
                     ?>
@@ -73,6 +95,8 @@ ob_start();
                     <td data-title="Tanggal"><?php echo $dt['tanggal']?> <?php echo $dt['bulan']?> <?php echo $dt['tahun']?></td>
                     <td align="center" data-title="Pasien Nunggu"><?php echo $dt['data_1']?></td>
                     <td align="center" data-title="Pasien Berkunjung"><?php echo $dt['data_2']?></td>
+                    <td></td>
+                    <td></td>
                     <td data-title="Pencapaian" align="center">
                         <?php 
                             $jml=($dt['data_1']/$dt['data_2'])*100;  
@@ -80,8 +104,8 @@ ob_start();
                             echo "$output";
                         ?>%
                     </td>
-                    <td data-title="Action" align="center"><a href="edit_pendaftaran.php?id=<?php echo $dt['id']; ?>"class="btn btn-warning">Edit</a>
-                        <a href="hapus_pendaftaran.php?id=<?php echo $dt['id']; ?>" class="btn btn-danger">Hapus</a></td>
+                    <td data-title="Action" align="center"><a href="edit_pemeriksaan.php?id=<?php echo $dt['id']; ?>"class="btn btn-warning">Edit</a>
+                        <a href="hapus_pemeriksaan.php?id=<?php echo $dt['id']; ?>" class="btn btn-danger">Hapus</a></td>
                     
                     </tr>
                   

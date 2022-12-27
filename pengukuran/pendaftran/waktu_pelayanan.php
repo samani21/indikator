@@ -6,15 +6,6 @@ include '../../asset/koneksi/koneksi.php';
 $nama_dokumen='RUANGAN REKAM MEDIS';
 ob_start();
 
-    $query    =mysqli_query($koneksi, "SELECT * FROM tb_pengukuran WHERE indikator LIKE 'Waktu pelayanan puskesmas dan kepuasan pelanggan'");
-    while ($data    =mysqli_fetch_array($query)){
-        $total1[]    =$data['total1'];
-        $data_1[]    =$data['data_1'];
-        $data_2[]    =$data['data_2'];
-    }
-    $total1     =array_sum($total1);
-    $data_1     =array_sum($data_1);
-    $data_2     =array_sum($data_2);
 ?>
 
 <div class="container">

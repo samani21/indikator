@@ -92,7 +92,7 @@ ob_start();
                     <?php } ?>
                     <tr>
                     <td colspan="3" align="center" >Total</td>
-                    <td align="center" colspan="6" >
+                    <td align="center" colspan="3" >
                         <?php 
                             //total
                             $data_1 = $data_1;
@@ -100,10 +100,11 @@ ob_start();
                             echo "$data_1";
                         ?>
                     </td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td colspan="3" align="center">Pencapaian</td>
-                    <td align="center" colspan="6" >
+                    <td align="center" colspan="3" >
                         <?php 
                             $ambilData1= mysqli_query($koneksi,"SELECT COUNT(tanggal) AS tgl FROM `tb_pengukuran` WHERE bulan LIKE '$bulan'and indikator like 'Kepuasan Pelanggan'AND tahun LIKE '$tahun'");
                             $bagi = mysqli_fetch_array($ambilData1);
@@ -118,6 +119,7 @@ ob_start();
                             echo "$output";
                         ?>%
                     </td>
+                    <td></td>
                 </tr>
                    
                 </tr>

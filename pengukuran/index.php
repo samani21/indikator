@@ -25,6 +25,46 @@ include "header.php";
                           </div>
                     </a>
                 </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <a href="anak/index.php" class="text-dark" style="text-decoration: none;">
+                        <div class="card">
+                            <img src="../asset/logo/anak.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Ruangan Pemeriksaan Anak</h5>
+                            </div>
+                          </div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <a href="tindakan/index.php" class="text-dark" style="text-decoration: none;">
+                        <div class="card">
+                            <img src="../asset/logo/tindakan.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Ruangan Tindakan</h5>
+                            </div>
+                          </div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <a href="gigi/index.php" class="text-dark" style="text-decoration: none;">
+                        <div class="card">
+                            <img src="../asset/logo/gigi.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Ruangan Gigi dan Mulut</h5>
+                            </div>
+                          </div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <a href="lab/index.php" class="text-dark" style="text-decoration: none;">
+                        <div class="card">
+                            <img src="../asset/logo/laboratorium.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Ruangan Laboratiom</h5>
+                            </div>
+                          </div>
+                    </a>
+                </div>
             </div>
       </div>
 </body>
